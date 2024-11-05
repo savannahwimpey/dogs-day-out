@@ -1,19 +1,28 @@
+import React, { useState } from 'react';
+
 function Navbar() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
     return (
-        <nav>
-            <div>
-                <a href="/">Dogs Day Out</a>
+        <nav className="navbar">
+            <div className="navbar-header">
+                <button className="hamburger" onClick={toggleMenu}>
+                    ☰
+                </button>
+                <a href="/" className="logo">Dogs Day Out</a>
             </div>
-            <div>
-                <a href="/login">Login</a>
+            <div className={`menu ${isOpen ? 'show' : ''}`}>
                 <a href="/search">Search</a>
                 <a href="/createAccount">Create Account</a>
+                <a href="/login" className="login-btn">Login</a>
 
             </div>
-
-        </nav >
+        </nav>
     );
-
 }
 
 export default Navbar;

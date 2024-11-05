@@ -11,7 +11,6 @@ function App() {
     <>
       <BrowserRouter>
         {/* <Navigation /> */}
-
         <main>
           <section>
             <Routes>
@@ -21,7 +20,6 @@ function App() {
               <Route path="/createAccount" element={<CreateAccount />} />
             </Routes>
           </section>
-
         </main>
       </BrowserRouter >
     </>
