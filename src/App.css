@@ -1,38 +1,278 @@
-.App {
+/*   ----- Variables  -----  */
+:root {
+  --black: #000000;
+  --dark-blue: #22394Bee;
+  --light-gray: #EBEFF2cc;
+  --light-gray-sheer: #EBEFF2dd;
+  --almost-white: #EBEFF2;
+  --dark-green: #1B3821;
+  --light-green: #97dba4;
+  --peach: #E0866A;
+  --light-yellow: #f4ee98;
+  --light-blue: #8bd8f9bd;
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {
+  /* Can alternatively define in html {}. */
+  background-color: var(--light-gray);
+  background-size: cover;
+  background-image: url(images/Central-Park-New-York-City.jpg);
+  background-attachment: fixed;
+  background-position: top left;
+  background-repeat: no-repeat;
+  color: var(--dark-green);
+  font-family: "Source Serif 4", serif;
+  /* Define with at least one font name and its related generic family name.*/
+  margin: 0 auto;
+  padding: 12em;
+  max-width: 1100px;
+  min-width: 800px;
+}
+
+/*  ----- Page layout blocks -----  */
+header {
+  margin-left: 4em;
+  margin-right: 4em;
+  font-size: 25px;
+  background-color: var(--light-gray);
+  color: var(--black);
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  padding: 1em;
+
+
+}
+
+main {
+  background-color: var(--light-gray-sheer);
+  border-radius: 5px;
+  padding: 2em;
+}
+
+section {
+  background-color: var(--light-gray);
+  color: var(--black);
+  margin: 1em;
+  padding: 1em;
+  border: 4px solid var(--light-yellow);
+  text-align: center;
+  font-size: larger;
+}
+
+article {
+  text-align: center;
+  margin-left: 5em;
+  margin-right: 5em;
+  margin-top: 4em;
+
+}
+
+h2 {
+  background-color: var(--light-green);
+  color: var(--black);
+  margin-left: 12em;
+  margin-right: 12em;
+  padding: 0.2em 0.5em;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+}
+
+button {
+  border-radius: 10px;
+  background-color: var(--light-green);
+  color: var(--black);
+  padding: 10px;
+  font-size: 20px;
+}
+
+button:hover {
+  color: var(--black);
+  background-color: var(--light-blue);
+}
+
+input[type="text"] textarea {
+  width: 85%;
+  padding: 1em;
+  align-items: normal;
+
+}
+
+
+/* Home Page */
+.search-button {
+  padding: 10px 20px;
+  font-size: 20px;
+  margin: 20px 0;
+  margin-top: 3em;
+  background-color: var(--light-green);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: var(--light-blue);
+}
+
+.search-instructions {
+  margin-top: 5px;
+  margin-right: 22em;
+  margin-left: 22em;
+  font-size: 18px;
+  color: var(--black);
+  background-color: var(--light-green);
+  padding: 2px 2px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Search Page */
+.search-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 8px;
+  margin: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+#search-box {
+  padding: 8px;
+  font-size: 20px;
+  border: 1px solid --dark-green;
+  color: var(--black);
+  border-radius: 4px;
+  flex: 1;
+  margin-left: 10em;
+  outline: none;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.go-button {
+  margin-right: 10em;
+
 }
+
+.results-box {
+  margin-top: 5em;
+}
+
+/* Login Page */
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid var(--light-gray);
+  border-radius: 8px;
+  text-align: center;
+  background-color: var(--light-gray);
+}
+
+
+.login {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.login label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.login input {
+  width: 90%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid var(--light-gray);
+  border-radius: 4px;
+  outline: none;
+}
+
+.login-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: var(--white);
+  background-color: var(--light-green);
+  border: 4px solid var(--navy-blue);
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  outline: none;
+}
+
+.login-button:hover {
+  background-color: var(--light-blue);
+}
+
+.create-account {
+  margin-top: 4em;
+  font-size: 20px;
+  color: var(--black);
+
+}
+
+.create-account a {
+  color: var(--black);
+  text-decoration: none;
+  border-radius: 4px;
+  background-color: var(--light-green);
+  padding: 5px 5px;
+}
+
+.create-account a:hover {
+  text-decoration: underline;
+}
+
+/* Create Account Page */
+
+
+/* Styling for labels and input fields */
+.create-account-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid var(--light-gray);
+  border-radius: 8px;
+  text-align: center;
+  background-color: var(--light-gray);
+}
+
+.create-login {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.create-login label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.create-login input {
+  width: 90%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid var(--light-gray);
+  border-radius: 4px;
+  outline: none;
+}
+
+/* Styling for the create account button */
+.create-account-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: var(--black);
+  background-color: var(--light-green);
+  border: 4px solid var(--navy-blue);
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  outline: none;
+}
+
+.create-account-button:hover {
+  background-color: var(--light-blue);
+}
+
+/* Hamburger Menu */
