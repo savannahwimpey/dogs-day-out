@@ -10,10 +10,7 @@ function Navbar() {
     return (
         <nav className="navbar">
             <div className="navbar-header">
-                <button className="hamburger" onClick={toggleMenu}>
-                    ☰
-                </button>
-                <a href="/" className="logo">Dogs Day Out</a>
+                <a href="/" className="logo">Dog's Day Out</a>
             </div>
             <div className={`menu ${isOpen ? 'show' : ''}`}>
                 <a href="/search">Search</a>

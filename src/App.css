@@ -7,7 +7,6 @@
   --almost-white: #EBEFF2;
   --dark-green: #1B3821;
   --light-green: #97dba4;
-  --peach: #E0866A;
   --light-yellow: #f4ee98;
   --light-blue: #8bd8f9bd;
 }
@@ -275,15 +274,14 @@ input[type="text"] textarea {
   background-color: var(--light-blue);
 }
 
-/* Hamburger Menu */
 /* Basic styling */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  background-color: #333;
-  color: white;
+  padding: 1em;
+  background-color: var(--light-green);
+  color: var(--black);
 }
 
 .navbar-header {
@@ -292,29 +290,22 @@ input[type="text"] textarea {
 }
 
 .logo {
-  margin-left: 0.5rem;
+  margin-left: 0.5em;
   text-decoration: none;
-  color: white;
-  font-size: 1.5rem;
+  color: var(--black);
+  font-size: 1.5em;
 }
 
-.hamburger {
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
 
 .menu {
   display: flex;
-  gap: 1rem;
+  gap: 1em;
 }
 
 .menu a {
-  color: white;
+  color: var(--black);
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.5em;
 }
 
 /* Hide menu on small screens */
@@ -325,7 +316,7 @@ input[type="text"] textarea {
     position: absolute;
     top: 60px;
     left: 0;
-    background-color: #333;
+    background-color: var(--dark-blue);
     width: 100%;
     padding: 1rem;
   }
