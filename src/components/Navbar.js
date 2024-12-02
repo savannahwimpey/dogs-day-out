@@ -14,8 +14,11 @@ function Navbar() {
             </div>
             <div className={`menu ${isOpen ? 'show' : ''}`}>
                 <a href="/search">Search</a>
+                <a href="/explore">Explore</a>
                 <a href="/createAccount">Create Account</a>
                 <a href="/login" className="login-btn">Login</a>
+                <a href="/profile" className="login-btn">Profile</a>
+
 
             </div>
         </nav>
